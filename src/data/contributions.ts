@@ -3,6 +3,7 @@ import type { LocaleText } from '@/types/i18n'
 interface Contribution {
 	name: string;
 	role: LocaleText;
+	time: LocaleText;
 	img_path: string;
 	// Optional optical size correction for the logo, see components/LogoBox.vue.
 	logo_scale?: number;
@@ -13,6 +14,10 @@ interface Contribution {
 const contributions: Contribution[] = [
 	{
 		name: "InferenceX",
+		time: {
+			en: "2026.11 - Present",
+			zh: "2026.11 - 至今"
+		},
 		role: {
 			en: "Outside Collaborator",
 			zh: "外部协作者（Outside Collaborator）"
@@ -32,6 +37,10 @@ const contributions: Contribution[] = [
 	},
 	{
 		name: "vLLM",
+		time: {
+			en: "2025.01 - Present",
+			zh: "2025.01 - 至今"
+		},
 		role: {
 			en: "Maintainer",
 			zh: "维护者（Maintainer）"
@@ -54,6 +63,10 @@ const contributions: Contribution[] = [
 	},
 	{
 		name: "vLLM-Ascend",
+		time: {
+			en: "2025.01 - 2026.03",
+			zh: "2025.01 - 2026.03"
+		},
 		role: {
 			en: "Core Contributor",
 			zh: "核心贡献者（Core Contributor）"

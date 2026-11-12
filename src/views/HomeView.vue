@@ -90,8 +90,8 @@ onMounted(() => {
           <v-divider vertical></v-divider>
           <v-col cols="12" md="9" class="text-main">
             <a :href="experience.link[locale] || experience.link.en" target="_blank" v-html="experience.title[locale] || experience.title.en" class="entry-title"></a>
-            <p v-html="experience.time[locale] || experience.time.en" style="font-size: 14px; margin-top: 5px;"></p>
-            <p v-html="experience.role[locale] || experience.role.en" style="font-size: 15px; font-weight: bold; margin-top: 2px;"></p>
+            <p v-html="experience.role[locale] || experience.role.en" style="font-size: 15px; font-weight: bold; margin-top: 5px;"></p>
+            <p v-html="experience.time[locale] || experience.time.en" style="font-size: 14px; margin-top: 2px;"></p>
             <div v-html="experience.description[locale] || experience.description.en" style="font-size: 16px; margin-top: 5px;"></div>
           </v-col>
         </v-row>
@@ -112,9 +112,8 @@ onMounted(() => {
           <v-divider vertical></v-divider>
           <v-col cols="12" md="9" class="text-main">
             <a :href="contribution.link" target="_blank" class="entry-title">{{ contribution.name }}</a>
-            <p style="font-size: 15px; margin-top: 5px;">
-              <b v-html="contribution.role[locale] || contribution.role.en"></b>
-            </p>
+            <p v-html="contribution.role[locale] || contribution.role.en" style="font-size: 15px; font-weight: bold; margin-top: 5px;"></p>
+            <p v-html="contribution.time[locale] || contribution.time.en" style="font-size: 14px; margin-top: 2px;"></p>
             <div v-html="contribution.description[locale] || contribution.description.en" style="font-size: 16px; margin-top: 5px;"></div>
           </v-col>
         </v-row>

@@ -50,7 +50,7 @@ npm run preview    # preview the production build
 | --- | --- |
 | Bio, section titles, footer (EN / 中文) | `src/locales/en.ts`, `src/locales/zh.ts` |
 | Experience | `src/data/experiences.ts` |
-| Open source contributions, merged PR count | `src/data/contributions.ts` |
+| Open source contributions | `src/data/contributions.ts` |
 | My projects | `src/data/projects.ts` |
 | Email and top links | `src/data/links.ts` |
 | Photo, logos | `public/images/` |

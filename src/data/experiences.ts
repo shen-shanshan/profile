@@ -5,6 +5,8 @@ interface Experience {
 	role: LocaleText;
 	time: LocaleText;
 	img_path: string;
+	// Optional optical size correction for the logo, see components/LogoBox.vue.
+	logo_scale?: number;
 	description: LocaleText;
 	link: LocaleText;
 }
@@ -17,19 +19,28 @@ const experiences: Experience[] = [
 			zh: "AMD"
 		},
 		role: {
-			en: "Senior Software Engineer · ROCm",
-			zh: "高级软件工程师 · ROCm"
+			en: "Senior Software Engineer",
+			zh: "高级软件工程师"
 		},
 		time: {
 			en: "2026.07 - Present",
 			zh: "2026.07 - 至今"
 		},
 		img_path: "images/logos/amd.png",
+		logo_scale: 0.88,
 		description: {
-			en: `Building the <b>vLLM</b> inference engine for the <a href="https://www.amd.com/en/products/software/rocm.html" target="_blank">AMD ROCm</a> GPU software ecosystem. <br />
-			Leading the performance optimization of <b>DeepSeek-V4-Pro</b> on <b>MI355X</b> GPUs (fused kernels, multi-stream overlap, etc.), and reviewing <b>90+</b> AMD-related PRs as a vLLM maintainer.`,
-			zh: `致力于为 <a href="https://www.amd.com/en/products/software/rocm.html" target="_blank">AMD ROCm</a> GPU 构筑高效易用的 <b>vLLM</b> 推理软件开源生态。<br />
-			负责 <b>DeepSeek-V4-Pro</b> 在 <b>MI355X</b> GPU 上的性能优化（融合算子、多流并行等），并作为 vLLM Maintainer Review 了 <b>90+</b> 个 AMD 相关 PR。`
+			en: `Building the vLLM inference engine for the <a href="https://www.amd.com/en/products/software/rocm.html" target="_blank">AMD ROCm</a> GPU software ecosystem:
+			<ul class="bio-list">
+				<li>Performance optimization of DeepSeek models on MI355X GPUs.</li>
+				<li>KV cache offloading and scheduling for agentic workloads.</li>
+				<li>Reviewed 170+ AMD-related PRs as a vLLM maintainer.</li>
+			</ul>`,
+			zh: `致力于为 <a href="https://www.amd.com/zh-cn/products/software/rocm.html" target="_blank">AMD ROCm</a> GPU 构筑 vLLM 推理软件开源生态：
+			<ul class="bio-list">
+				<li>DeepSeek 系列模型在 MI355X GPU 上的性能优化；</li>
+				<li>面向 Agentic 场景的 KV Cache 卸载与调度优化；</li>
+				<li>作为 vLLM Maintainer Review 了 170+ 个 AMD 相关 PR。</li>
+			</ul>`
 		},
 		link: {
 			en: "https://www.amd.com/en/products/software/rocm.html",
@@ -51,10 +62,18 @@ const experiences: Experience[] = [
 		},
 		img_path: "images/logos/huawei.png",
 		description: {
-			en: `<b>Ascend Computing</b> (2024.08 - 2026.06): built the vLLM inference engine for the <a href="https://www.hiascend.com/" target="_blank">Ascend NPU</a> software ecosystem. Helped design vLLM's hardware plugin mechanism and incubate <b>vLLM-Ascend</b>, owned its multimodal module, and led ViT Full CUDA Graph support in vLLM. <br />
-			<b>Corporate IT</b> (2023.07 - 2024.08): Java backend developer of the BI module for the PSI (purchase-sale-inventory) system in the MetaERP project.`,
-			zh: `<b>昇腾计算</b>（2024.08 - 2026.06）：致力于为<a href="https://www.hiascend.com/" target="_blank">昇腾 NPU</a> 构筑高效易用的 vLLM 推理软件开源生态。参与设计 vLLM 硬件插件化能力并推动孵化 <b>vLLM-Ascend</b>，负责其多模态模块的整体设计与看护，主导了 vLLM 中 ViT Full CUDA Graph 特性的集成。<br />
-			<b>集团 IT</b>（2023.07 - 2024.08）：MetaERP 国产化替代项目中 PSI（进销存）BI 模块的核心 Java 后端开发人员。`
+			en: `Ascend Computing (2024.08 - 2026.06), building the vLLM inference engine for the <a href="https://www.hiascend.com/" target="_blank">Ascend NPU</a> software ecosystem:
+			<ul class="bio-list">
+				<li>vLLM hardware plugin mechanism and the incubation of vLLM-Ascend.</li>
+				<li>Multimodal inference, including ViT CUDA graph support in vLLM.</li>
+			</ul>
+			Corporate IT (2023.07 - 2024.08): Java backend development for the MetaERP project.`,
+			zh: `昇腾计算（2024.08 - 2026.06），致力于为<a href="https://www.hiascend.com/" target="_blank">昇腾 NPU</a> 构筑 vLLM 推理软件开源生态：
+			<ul class="bio-list">
+				<li>vLLM 硬件插件化机制设计与 vLLM-Ascend 项目孵化；</li>
+				<li>多模态推理优化，包括 vLLM 中的 ViT CUDA Graph 支持。</li>
+			</ul>
+			集团 IT（2023.07 - 2024.08）：MetaERP 项目的 Java 后端开发。`
 		},
 		link: {
 			en: "https://www.huawei.com/en/",
@@ -75,6 +94,7 @@ const experiences: Experience[] = [
 			zh: "2021.09 - 2023.06"
 		},
 		img_path: "images/logos/bjtu.png",
+		logo_scale: 1.08,
 		description: {
 			en: "Majored in communication engineering, focusing on NAS layer security of wireless communication.",
 			zh: "通信工程专业，研究方向为无线通信 NAS 层安全。"
@@ -98,6 +118,7 @@ const experiences: Experience[] = [
 			zh: "2016.09 - 2020.06"
 		},
 		img_path: "images/logos/bjtu.png",
+		logo_scale: 1.08,
 		description: {
 			en: "Majored in communication engineering.",
 			zh: "通信工程专业。"

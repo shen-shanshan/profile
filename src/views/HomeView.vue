@@ -2,10 +2,11 @@
 import { onMounted, reactive } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { experiences } from "@/data/experiences"
-import { contributions, contributionStats } from "@/data/contributions"
+import { contributions } from "@/data/contributions"
 import { projects } from "@/data/projects"
 import { email, links } from "@/data/links"
 import { asset } from "@/utils/asset"
+import LogoBox from "@/components/LogoBox.vue"
 
 const { locale } = useI18n()
 
@@ -84,18 +85,14 @@ onMounted(() => {
       <v-card-item>
         <v-row v-for="experience in experiences" :key="experience.title.en" class="mt-4">
           <v-col cols="12" md="3" class="d-flex align-center justify-center">
-            <div class="logo-box">
-              <img :src="asset(experience.img_path)" :alt="experience.title.en" />
-            </div>
+            <LogoBox :src="asset(experience.img_path)" :alt="experience.title.en" :scale="experience.logo_scale" />
           </v-col>
           <v-divider vertical></v-divider>
           <v-col cols="12" md="9" class="text-main">
             <a :href="experience.link[locale] || experience.link.en" target="_blank" v-html="experience.title[locale] || experience.title.en" class="entry-title"></a>
-            <p style="font-size: 15px; margin-top: 5px;">
-              <b v-html="experience.role[locale] || experience.role.en"></b>
-              <span class="ml-2" v-html="experience.time[locale] || experience.time.en" style="font-size: 14px;"></span>
-            </p>
-            <p v-html="experience.description[locale] || experience.description.en" style="font-size: 16px; margin-top: 5px;"></p>
+            <p v-html="experience.time[locale] || experience.time.en" style="font-size: 14px; margin-top: 5px;"></p>
+            <p v-html="experience.role[locale] || experience.role.en" style="font-size: 15px; font-weight: bold; margin-top: 2px;"></p>
+            <div v-html="experience.description[locale] || experience.description.en" style="font-size: 16px; margin-top: 5px;"></div>
           </v-col>
         </v-row>
       </v-card-item>
@@ -108,12 +105,9 @@ onMounted(() => {
         <h2 class="card-title">{{ $t('sections.openSource') }}</h2>
       </v-card-title>
       <v-card-item>
-        <p class="text-main mt-2" v-html="$t('sections.openSourceSummary', { count: contributionStats.prCount, link: contributionStats.prLink })"></p>
         <v-row v-for="contribution in contributions" :key="contribution.name" class="mt-4">
           <v-col cols="12" md="3" class="d-flex align-center justify-center">
-            <div class="logo-box">
-              <img :src="asset(contribution.img_path)" :alt="contribution.name" />
-            </div>
+            <LogoBox :src="asset(contribution.img_path)" :alt="contribution.name" :scale="contribution.logo_scale" />
           </v-col>
           <v-divider vertical></v-divider>
           <v-col cols="12" md="9" class="text-main">
@@ -121,7 +115,7 @@ onMounted(() => {
             <p style="font-size: 15px; margin-top: 5px;">
               <b v-html="contribution.role[locale] || contribution.role.en"></b>
             </p>
-            <p v-html="contribution.description[locale] || contribution.description.en" style="font-size: 16px; margin-top: 5px;"></p>
+            <div v-html="contribution.description[locale] || contribution.description.en" style="font-size: 16px; margin-top: 5px;"></div>
           </v-col>
         </v-row>
       </v-card-item>

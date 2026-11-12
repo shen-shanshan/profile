@@ -10,13 +10,13 @@ export default {
   },
 
   home: {
-    bio: `I am currently a <b>Senior Software Engineer</b> at <a href="https://www.amd.com/en/products/software/rocm.html" target="_blank">AMD ROCm</a> (previously at <a href="https://www.hiascend.com/" target="_blank">Huawei Ascend</a>), building the <b>vLLM</b> inference engine for the GPU/NPU software ecosystem.
+    bio: `I am currently a Senior Software Engineer at <a href="https://www.amd.com/en/products/software/rocm.html" target="_blank">AMD ROCm</a> (previously at <a href="https://www.hiascend.com/" target="_blank">Huawei Ascend</a>), building the vLLM inference engine for the GPU/NPU software ecosystem.
       <br /><br />
-      I am also a <b>maintainer</b> of <a href="https://github.com/vllm-project" target="_blank">vllm-project</a>, mainly focusing on:
+      I am also a maintainer of <a href="https://github.com/vllm-project" target="_blank">vllm-project</a>, mainly focusing on:
       <ul class="bio-list">
-        <li>Performance optimization for <b>AMD Instinct GPUs</b> (especially the DeepSeek model family).</li>
-        <li><b>Multimodal inference</b> (especially ViT execution optimization).</li>
-        <li><b>Hardware portability</b> (especially out-of-tree device extensibility).</li>
+        <li>Performance optimization for AMD Instinct GPUs (especially the DeepSeek model family).</li>
+        <li>Multimodal inference (especially ViT execution optimization).</li>
+        <li>Hardware portability (especially out-of-tree device extensibility).</li>
       </ul>
       Before this, I studied at <a href="https://en.bjtu.edu.cn/" target="_blank">Beijing Jiaotong University</a> (B.Eng. / M.Eng.), majoring in communication engineering.`,
     email: 'Email',
@@ -25,7 +25,6 @@ export default {
   sections: {
     experience: 'Experience',
     openSource: 'Open Source Contributions',
-    openSourceSummary: 'Overall, I have contributed <a href="{link}" target="_blank"><b>{count}+ merged PRs</b></a> to the vLLM ecosystem.',
     projects: 'My Projects',
   },
 

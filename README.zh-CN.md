@@ -50,7 +50,7 @@ npm run preview    # 预览生产构建结果
 | --- | --- |
 | 个人简介、小节标题、页脚（中 / 英） | `src/locales/en.ts`、`src/locales/zh.ts` |
 | 个人经历 | `src/data/experiences.ts` |
-| 开源贡献、已合入 PR 数量 | `src/data/contributions.ts` |
+| 开源贡献 | `src/data/contributions.ts` |
 | 我的项目 | `src/data/projects.ts` |
 | 邮箱和顶部链接 | `src/data/links.ts` |
 | 照片、logo | `public/images/` |

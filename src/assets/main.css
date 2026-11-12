@@ -1,0 +1,167 @@
+@import './base.css';
+
+/* Theme colors, driven by <html data-theme> (see composables/useThemeMode.ts). */
+:root {
+	--font-family: 'Yozai', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+	--c-bg: #ffffff;
+	--c-text: #000000;
+	--c-link: #2a9fd6;
+	--c-link-hover-bg: hsla(200, 70%, 50%, 0.15);
+	--c-accent: #66ccff;
+	--c-card-border: rgba(0, 0, 0, 0.15);
+	color-scheme: light;
+}
+
+html[data-theme='dark'] {
+	--c-bg: #16181d;
+	--c-text: #f2f2f2;
+	--c-link: #6cc8f0;
+	--c-link-hover-bg: hsla(200, 70%, 60%, 0.2);
+	--c-card-border: rgba(255, 255, 255, 0.2);
+	color-scheme: dark;
+}
+
+body {
+	background-color: var(--c-bg);
+	color: var(--c-text);
+	font-family: var(--font-family);
+}
+
+/* Vuetify sets its own font-family on these; keep icon fonts untouched. */
+.v-application,
+.v-btn,
+.v-card-title,
+.v-card-text,
+.v-list-item-title {
+	font-family: var(--font-family) !important;
+}
+
+#app {
+	max-width: 1000px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 1rem;
+
+	font-weight: normal;
+}
+
+a,
+.green {
+	text-decoration: none;
+	color: var(--c-link);
+	transition: 0.4s;
+}
+
+p {
+	font-size: 16px;
+	line-height: 1.5;
+}
+
+b {
+	font-weight: bold;
+}
+
+.text-main,
+.text-main p,
+.v-card-text.text-main {
+	color: var(--c-text);
+	opacity: 1;
+}
+
+@media (hover: hover) {
+	a:hover {
+		background-color: var(--c-link-hover-bg);
+	}
+}
+
+@media (min-width: 1024px) {
+	body {
+		display: flex;
+		justify-content: center;
+		align-items: start;
+	}
+
+	#app {
+		padding: 0 1rem;
+	}
+}
+
+.v-card-title {
+	white-space: normal;
+}
+
+.card-title {
+	text-decoration: underline;
+	text-decoration-style: dashed;
+	text-decoration-color: var(--c-accent);
+	-webkit-text-decoration-color: var(--c-accent);
+}
+
+.bio {
+	font-size: 16px;
+	line-height: 1.6;
+}
+
+.bio-list {
+	margin: 6px 0 6px 1.5em;
+}
+
+.profile-links {
+	font-size: 15px;
+	line-height: 1.9;
+}
+
+.photo {
+	border-radius: 8px;
+}
+
+.entry-title {
+	font-size: 24px;
+	color: var(--c-text);
+}
+
+/* Logos keep a white background so dark logos stay readable in dark mode. */
+.logo-box {
+	width: 100%;
+	max-width: 240px;
+	height: 90px;
+	padding: 12px 16px;
+	border-radius: 10px;
+	background: #ffffff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.logo-box img {
+	max-width: 100%;
+	max-height: 100%;
+	object-fit: contain;
+}
+
+.project-card {
+	border-color: var(--c-card-border) !important;
+	transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.project-card:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+	background-color: transparent;
+}
+
+.project-name {
+	font-size: 16px;
+	font-weight: bold;
+	color: var(--c-link);
+	overflow-wrap: anywhere;
+}
+
+.lang-dot {
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	margin-right: 4px;
+	vertical-align: middle;
+}

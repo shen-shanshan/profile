@@ -1,0 +1,27 @@
+/* Yozai (悠哉字体, SIL OFL 1.1), the font used by https://shen-shanshan.github.io/.
+   This is a subset containing only the glyphs used on this site; regenerate it
+   with `npm run subset-font` after changing any text. */
+@font-face {
+	font-family: 'Yozai';
+	src: url('./fonts/yozai-subset.woff2') format('woff2');
+	font-display: swap;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	position: relative;
+	font-weight: normal;
+}
+
+body {
+	min-height: 100vh;
+	line-height: 1.6;
+	font-size: 15px;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	transition: color 0.3s, background-color 0.3s;
+}

@@ -82,12 +82,12 @@ const experiences: Experience[] = [
 	},
 	{
 		title: {
-			en: "Beijing Jiaotong University (M.Eng.)",
-			zh: "北京交通大学（硕士）"
+			en: "Beijing Jiaotong University",
+			zh: "北京交通大学"
 		},
 		role: {
-			en: "School of Electronic and Information Engineering",
-			zh: "电子信息工程学院"
+			en: "School of Electronic and Information Engineering (M.Eng.)",
+			zh: "电子信息工程学院（硕士）"
 		},
 		time: {
 			en: "2021.09 - 2023.06",
@@ -106,12 +106,12 @@ const experiences: Experience[] = [
 	},
 	{
 		title: {
-			en: "Beijing Jiaotong University (B.Eng.)",
-			zh: "北京交通大学（本科）"
+			en: "Beijing Jiaotong University",
+			zh: "北京交通大学"
 		},
 		role: {
-			en: "School of Electronic and Information Engineering",
-			zh: "电子信息工程学院"
+			en: "School of Electronic and Information Engineering (B.Eng.)",
+			zh: "电子信息工程学院（本科）"
 		},
 		time: {
 			en: "2016.09 - 2020.06",

@@ -11,7 +11,7 @@ const props = withDefaults(defineProps<{
 // Every logo gets the same visual area regardless of its aspect ratio, so a
 // wide wordmark is not dwarfed by a compact one (fitting all logos into the
 // same box would make the squarer ones look much larger).
-const LOGO_AREA = 4800
+const LOGO_AREA = 5600
 
 const size = ref<{ width: string; height: string } | null>(null)
 

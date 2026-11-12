@@ -83,7 +83,7 @@ onMounted(() => {
         <h2 class="card-title">{{ $t('sections.experience') }}</h2>
       </v-card-title>
       <v-card-item>
-        <v-row v-for="experience in experiences" :key="experience.title.en" class="mt-4">
+        <v-row v-for="experience in experiences" :key="experience.title.en + experience.time.en" class="mt-4">
           <v-col cols="12" md="3" class="d-flex align-center justify-center">
             <LogoBox :src="asset(experience.img_path)" :alt="experience.title.en" :scale="experience.logo_scale" />
           </v-col>

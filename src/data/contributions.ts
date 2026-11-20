@@ -13,6 +13,30 @@ interface Contribution {
 
 const contributions: Contribution[] = [
 	{
+		name: "AMD-Kernels",
+		time: {
+			en: "2026.11 - Present",
+			zh: "2026.11 - 至今"
+		},
+		role: {
+			en: "Outside Collaborator",
+			zh: "外部协作者（Outside Collaborator）"
+		},
+		img_path: "images/logos/inferact.png",
+		logo_scale: 0.92,
+		description: {
+			en: `High-performance LLM inference kernels for AMD GPUs by <a href="https://github.com/Inferact" target="_blank">Inferact</a>.
+			<ul class="bio-list">
+				<li>Developing fused low-precision GEMM kernels for DeepSeek models on MI355X.</li>
+			</ul>`,
+			zh: `<a href="https://github.com/Inferact" target="_blank">Inferact</a> 面向 AMD GPU 的高性能大模型推理算子库。
+			<ul class="bio-list">
+				<li>为 DeepSeek 系列模型在 MI355X 上开发低精度 GEMM 融合算子。</li>
+			</ul>`
+		},
+		link: "https://github.com/Inferact/amd-kernels"
+	},
+	{
 		name: "InferenceX",
 		time: {
 			en: "2026.11 - Present",

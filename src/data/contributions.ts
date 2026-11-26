@@ -19,8 +19,8 @@ const contributions: Contribution[] = [
 			zh: "2026.11 - 至今"
 		},
 		role: {
-			en: "Outside Collaborator",
-			zh: "外部协作者（Outside Collaborator）"
+			en: "Maintainer",
+			zh: "维护者（Maintainer）"
 		},
 		img_path: "images/logos/inferact.png",
 		logo_scale: 0.92,
@@ -28,10 +28,12 @@ const contributions: Contribution[] = [
 			en: `High-performance LLM inference kernels for AMD GPUs by <a href="https://github.com/Inferact" target="_blank">Inferact</a>.
 			<ul class="bio-list">
 				<li>Developing fused low-precision GEMM kernels for DeepSeek models on MI355X.</li>
+				<li>Maintaining a unified kernel interface for vLLM integration across model families.</li>
 			</ul>`,
 			zh: `<a href="https://github.com/Inferact" target="_blank">Inferact</a> 面向 AMD GPU 的高性能大模型推理算子库。
 			<ul class="bio-list">
-				<li>为 DeepSeek 系列模型在 MI355X 上开发低精度 GEMM 融合算子。</li>
+				<li>为 DeepSeek 系列模型在 MI355X 上开发低精度 GEMM 融合算子；</li>
+				<li>维护面向 vLLM 集成的统一算子接口规范，覆盖多个模型系列。</li>
 			</ul>`
 		},
 		link: "https://github.com/Inferact/amd-kernels"
